@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Plan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Training Plan</h1>
+        <div class="crud-form">
+            <h2>Add Activity</h2>
+            <form id="activityForm">
+                <input type="text" id="title" placeholder="Title" required>
+                <textarea id="description" placeholder="Description" required></textarea>
+                <input type="number" id="duration" placeholder="Duration (min)" required>
+                <input type="number" id="repetitions" placeholder="Repetitions" required>
+                <button type="submit">Add Activity</button>
+            </form>
+        </div>
+        <div class="activity-list">
+            <h2>Activities</h2>
+            <ul id="activities"></ul>
+        </div>
+        <button id="executePlan">Execute Plan</button>
+    </div>
+
+    <div id="executionModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="executionDetails"></div>
+            <button id="nextActivity">Next Activity</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
