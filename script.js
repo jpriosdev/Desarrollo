@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // Variable para almacenar la duración total en minutos
-    let totalDuracion = 0;
-    
+     
     const form = document.getElementById('activityForm');
     const activityList = document.getElementById('activities');
     const executePlanBtn = document.getElementById('executePlan');
@@ -14,9 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentActivityIndex = 0;
 
     // Función para actualizar la duración total en el DOM
-    function actualizarDuracionTotal() {
-    totalMinutesDisplay.innerText = totalDuracion;
-    }
+    
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -32,10 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
         form.reset();
     });
-
-        // Sumar la duración al total y actualizar el display
-        totalDuracion += duration;
-        actualizarDuracionTotal();
 
     executePlanBtn.addEventListener('click', () => {
         if (activities.length > 0) {
@@ -53,10 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.style.display = 'none';
     });
 
-        // Inicializar la duración total al cargar la página
-document.addEventListener('DOMContentLoaded', function() {
-    actualizarDuracionTotal();
-});
+   });
 
     nextActivityBtn.addEventListener('click', () => {
         if (currentActivityIndex < activities.length - 1) {
