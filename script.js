@@ -28,6 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const activity = { title, description, duration, repetitions };
         activities.push(activity);
         renderActivities();
+    // Sumar la duración al total y actualizar el display
+    totalDuracion += duration;
+    actualizarDuracionTotal();
+        
         form.reset();
     });
 
@@ -41,9 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-        // Sumar la duración al total y actualizar el display
-    totalDuracion += duration;
-    actualizarDuracionTotal();
+
 
     closeModal.addEventListener('click', () => {
         modal.style.display = 'none';
