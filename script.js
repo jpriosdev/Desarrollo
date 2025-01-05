@@ -26,11 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const repetitions = document.getElementById('repetitions').value;
 
         const activity = { title, description, duration, repetitions };
+            // Sumar la duración al total y actualizar el display
+        totalDuracion += document.getElementById('duration').value;
+        actualizarDuracionTotal();
         activities.push(activity);
         renderActivities();
-    // Sumar la duración al total y actualizar el display
-    totalDuracion += duration;
-    actualizarDuracionTotal();
+
         
         form.reset();
     });
