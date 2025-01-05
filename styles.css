@@ -1,4 +1,5 @@
-body {
+/* Estilos Generales */
+body { 
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
@@ -69,7 +70,6 @@ li {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
 }
 
@@ -98,5 +98,82 @@ li {
     .container {
         width: 100%;
         padding: 10px;
+    }
+}
+
+/* Estilos para el Contador */
+.contador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.unidad {
+    text-align: center;
+    margin: 0 10px;
+}
+
+.numero {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #28a745; /* Color verde para indicar progreso */
+}
+
+.etiqueta {
+    font-size: 0.8em;
+    color: #666;
+}
+
+/* Clase para ocultar elementos */
+.oculto {
+    display: none;
+}
+
+/* Estilos para el botón "Execute Plan" */
+#executePlan {
+    background-color: #28a745; /* Verde para indicar acción positiva */
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+#executePlan:hover {
+    background-color: #218838;
+}
+
+/* Estilos para los botones "Pausar" y "Reiniciar" */
+#pauseCounter, #resetCounter {
+    background-color: #6c757d; /* Color gris para pausar y reiniciar */
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+#pauseCounter:hover, #resetCounter:hover {
+    background-color: #5a6268;
+}
+
+/* Responsividad para el Contador y Botones */
+@media (max-width: 600px) {
+    .contador {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .numero {
+        font-size: 2em;
+    }
+    #executePlan, #pauseCounter, #resetCounter {
+        width: 100%;
+        margin: 5px 0;
     }
 }
