@@ -162,7 +162,11 @@ li {
 #pauseCounter:hover, #resetCounter:hover {
     background-color: #5a6268;
 }
-
+/* Estilos para la Duración Total */
+.total-duration {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
 /* Responsividad para el Contador y Botones */
 @media (max-width: 600px) {
     .contador {
