@@ -3,19 +3,21 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-start; /* Cambiado de center a flex-start */
+    min-height: 100vh; /* Cambiado de height a min-height */
     margin: 0;
     background-color: #f0f0f0;
 }
 
+
 .container {
     background: #fff;
-    padding: 20px;
+    padding: 20px 30px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 90%;
-    max-width: 600px;
+    margin: 20px auto;
+    max-width: 800px;
+    width: 100%; /* Asegura que el contenedor tome el 100% del ancho disponible */
 }
 
 h1 {
