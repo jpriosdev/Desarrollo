@@ -26,15 +26,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const repetitions = document.getElementById('repetitions').value;
 
         const activity = { title, description, duration, repetitions };
-            // Sumar la duración al total y actualizar el display
-        totalDuracion += duration;
-        actualizarDuracionTotal();
-                
+               
         activities.push(activity);
         renderActivities();
         
         form.reset();
     });
+
+        // Sumar la duración al total y actualizar el display
+        totalDuracion += duration;
+        actualizarDuracionTotal();
 
     executePlanBtn.addEventListener('click', () => {
         if (activities.length > 0) {
