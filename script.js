@@ -27,11 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const activity = { title, description, duration, repetitions };
             // Sumar la duración al total y actualizar el display
-        totalDuracion += document.getElementById('duration').value;
+        totalDuracion += duration;
         actualizarDuracionTotal();
+                
         activities.push(activity);
         renderActivities();
-
         
         form.reset();
     });
