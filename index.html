@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mi Aplicación</title>
-    <!-- Enlace al archivo CSS existente -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Plan</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Bienvenido a Mi Aplicación</h1>
-        
+        <h1>Training Plan</h1>
+
         <!-- Contador de Tiempo Transcurrido (oculto inicialmente) -->
         <div id="contador" class="contador oculto">
             <div class="unidad">
@@ -28,32 +28,37 @@
 
         <!-- Botones para Controlar el Contador -->
         <div class="crud-form">
-            <!-- Botón para Ejecutar el Plan -->
-            <button id="executePlan">Execute Plan</button>
+            <h2>Add Activity</h2>
+            <form id="activityForm">
+                <input type="text" id="title" placeholder="Title" required>
+                <textarea id="description" placeholder="Description"></textarea>
+                <input type="number" id="duration" placeholder="Duration (min)" required>
+                <input type="number" id="repetitions" placeholder="Repetitions">
+                <button type="submit">Add Activity</button>
+            </form>
             <!-- Botones para Pausar y Reiniciar (ocultos inicialmente) -->
             <button id="pauseCounter" class="oculto">Pausar</button>
             <button id="resetCounter" class="oculto">Reiniciar</button>
         </div>
-        
-        <!-- Lista de Actividades -->
+
         <div class="activity-list">
-            <ul>
-                <li>Actividad 1 <button>Eliminar</button></li>
-                <li>Actividad 2 <button>Eliminar</button></li>
-                <!-- Más actividades -->
-            </ul>
+            <h2>Activities</h2>
+            <ul id="activities"></ul>
         </div>
+        <button id="executePlan">Execute Plan</button>
     </div>
 
-    <!-- Modal y otros elementos existentes -->
-    <div id="miModal" class="modal">
+    <div id="executionModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <p>Contenido del Modal</p>
+            <div id="executionDetails"></div>
+            <button id="nextActivity">Next Activity</button>
         </div>
     </div>
 
-    <!-- Enlace al archivo JavaScript -->
+    <!-- Enlace al archivo JavaScript existente -->
+    <script src="script.js"></script>
+    <!-- Enlace al archivo JavaScript del contador -->
     <script src="contador.js"></script>
 </body>
 </html>
